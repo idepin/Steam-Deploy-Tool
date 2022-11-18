@@ -94,5 +94,17 @@ namespace SteamPipeLCS.Properties {
                 this["gameBuildSrc"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool hasSteamCfg {
+            get {
+                return ((bool)(this["hasSteamCfg"]));
+            }
+            set {
+                this["hasSteamCfg"] = value;
+            }
+        }
     }
 }

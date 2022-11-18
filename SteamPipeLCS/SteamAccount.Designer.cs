@@ -104,7 +104,10 @@ namespace SteamPipeLCS
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SteamAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SteamAccount";
             this.Load += new System.EventHandler(this.SteamAccount_Load);
             this.ResumeLayout(false);

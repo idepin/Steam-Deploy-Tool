@@ -62,6 +62,7 @@ namespace SteamPipeLCS
             this.comboSetLive = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.serverSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -293,7 +294,8 @@ namespace SteamPipeLCS
             // 
             this.toolStripSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.toolStripSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSteamAccount});
+            this.toolStripSteamAccount,
+            this.serverSettingToolStripMenuItem});
             this.toolStripSettings.Name = "toolStripSettings";
             this.toolStripSettings.Size = new System.Drawing.Size(61, 20);
             this.toolStripSettings.Text = "Settings";
@@ -301,7 +303,7 @@ namespace SteamPipeLCS
             // toolStripSteamAccount
             // 
             this.toolStripSteamAccount.Name = "toolStripSteamAccount";
-            this.toolStripSteamAccount.Size = new System.Drawing.Size(155, 22);
+            this.toolStripSteamAccount.Size = new System.Drawing.Size(180, 22);
             this.toolStripSteamAccount.Text = "Steam Account";
             this.toolStripSteamAccount.Click += new System.EventHandler(this.toolStripSteamAccount_Click);
             // 
@@ -406,6 +408,13 @@ namespace SteamPipeLCS
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // serverSettingToolStripMenuItem
+            // 
+            this.serverSettingToolStripMenuItem.Name = "serverSettingToolStripMenuItem";
+            this.serverSettingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serverSettingToolStripMenuItem.Text = "Server Setting";
+            this.serverSettingToolStripMenuItem.Click += new System.EventHandler(this.serverSettingToolStripMenuItem_Click);
+            // 
             // MainDeployTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,7 +446,6 @@ namespace SteamPipeLCS
             this.Controls.Add(this.label1);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainDeployTool";
@@ -492,6 +500,7 @@ namespace SteamPipeLCS
         private System.Windows.Forms.ToolStripMenuItem toolStripSettings;
         private System.Windows.Forms.ToolStripMenuItem toolStripSteamAccount;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serverSettingToolStripMenuItem;
     }
 }
 

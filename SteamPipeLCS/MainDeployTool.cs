@@ -64,6 +64,11 @@ namespace SteamPipeLCS
 
         private void btnDeploy_Click(object sender, EventArgs e)
         {
+            if(Properties.Settings.Default.username == "")
+            {
+                MessageBox.Show("Steam Username & Password is empty, please go to Settings/SteamAccount", "Need Username & Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if(comboDeployType.SelectedIndex == 0)
             {
                 InitAppBuildScript(true);
@@ -166,6 +171,11 @@ namespace SteamPipeLCS
 
         private void MainDeployTool_Load(object sender, EventArgs e)
         {
+            if (!Properties.Settings.Default.hasSteamCfg)
+            {
+                ServerSetting serverSetting= new ServerSetting();
+                serverSetting.ShowDialog();
+            }
             if(Properties.Settings.Default.username == "")
             {
                 SteamAccount steamAccount = new SteamAccount();
@@ -227,6 +237,12 @@ namespace SteamPipeLCS
         {
             About about= new About();
             about.ShowDialog();
+        }
+
+        private void serverSettingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ServerSetting serverSetting = new ServerSetting();
+            serverSetting.ShowDialog();
         }
     }
 }

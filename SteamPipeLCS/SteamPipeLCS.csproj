@@ -90,6 +90,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerSetting.Designer.cs">
+      <DependentUpon>ServerSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="SteamAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ServerSetting.resx">
+      <DependentUpon>ServerSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SteamAccount.resx">
       <DependentUpon>SteamAccount.cs</DependentUpon>
     </EmbeddedResource>
