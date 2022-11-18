@@ -54,14 +54,14 @@ namespace SteamPipeLCS
             this.toolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSteamAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.comboDeployType = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.steampipeBuild = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.comboSetLive = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -72,10 +72,11 @@ namespace SteamPipeLCS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(13, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "App Id";
             // 
@@ -102,13 +103,13 @@ namespace SteamPipeLCS
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(13, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Description";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtSteamSDK
             // 
@@ -124,15 +125,17 @@ namespace SteamPipeLCS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(13, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Steam SDK";
             // 
             // btnBrowseFolderBuildOutput
             // 
+            this.btnBrowseFolderBuildOutput.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnBrowseFolderBuildOutput.Location = new System.Drawing.Point(338, 300);
             this.btnBrowseFolderBuildOutput.Name = "btnBrowseFolderBuildOutput";
             this.btnBrowseFolderBuildOutput.Size = new System.Drawing.Size(75, 23);
@@ -143,6 +146,7 @@ namespace SteamPipeLCS
             // 
             // btnGameBuildSourceChange
             // 
+            this.btnGameBuildSourceChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnGameBuildSourceChange.Location = new System.Drawing.Point(338, 353);
             this.btnGameBuildSourceChange.Name = "btnGameBuildSourceChange";
             this.btnGameBuildSourceChange.Size = new System.Drawing.Size(75, 23);
@@ -165,10 +169,11 @@ namespace SteamPipeLCS
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(13, 333);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 16);
+            this.label5.Size = new System.Drawing.Size(120, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Game Build Source";
             // 
@@ -186,15 +191,17 @@ namespace SteamPipeLCS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(13, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 14;
             this.label6.Text = "Depot Id";
             // 
             // btnDepotIdChange
             // 
+            this.btnDepotIdChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnDepotIdChange.Location = new System.Drawing.Point(338, 151);
             this.btnDepotIdChange.Name = "btnDepotIdChange";
             this.btnDepotIdChange.Size = new System.Drawing.Size(75, 23);
@@ -205,6 +212,7 @@ namespace SteamPipeLCS
             // 
             // btnAppIdChange
             // 
+            this.btnAppIdChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnAppIdChange.Location = new System.Drawing.Point(338, 101);
             this.btnAppIdChange.Name = "btnAppIdChange";
             this.btnAppIdChange.Size = new System.Drawing.Size(75, 23);
@@ -216,18 +224,20 @@ namespace SteamPipeLCS
             // txtVersion
             // 
             this.txtVersion.AutoSize = true;
-            this.txtVersion.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVersion.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtVersion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtVersion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtVersion.Location = new System.Drawing.Point(316, 38);
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(30, 14);
             this.txtVersion.TabIndex = 18;
-            this.txtVersion.Text = "v.1.0";
+            this.txtVersion.Text = "v.1.1";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(12, 24);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 14);
@@ -247,8 +257,9 @@ namespace SteamPipeLCS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(104, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(214, 23);
@@ -299,40 +310,20 @@ namespace SteamPipeLCS
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SteamPipeLCS.Properties.Resources.Steam_icon_logo_svg;
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(301, 517);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SteamPipeLCS.Properties.Resources.Logo_4Happy_Studio_Berwarna;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 517);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // btnCreate
             // 
-            this.btnCreate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCreate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnCreate.Location = new System.Drawing.Point(16, 455);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(397, 46);
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "Deploy";
             this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnCreate.Click += new System.EventHandler(this.btnDeploy_Click);
             // 
             // comboDeployType
             // 
@@ -350,16 +341,18 @@ namespace SteamPipeLCS
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(13, 388);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 16);
+            this.label8.Size = new System.Drawing.Size(78, 16);
             this.label8.TabIndex = 26;
             this.label8.Text = "Deploy Type";
             // 
             // steampipeBuild
             // 
             this.steampipeBuild.AutoSize = true;
+            this.steampipeBuild.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.steampipeBuild.Location = new System.Drawing.Point(13, 554);
             this.steampipeBuild.Name = "steampipeBuild";
             this.steampipeBuild.Size = new System.Drawing.Size(88, 13);
@@ -371,10 +364,11 @@ namespace SteamPipeLCS
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label9.Location = new System.Drawing.Point(219, 388);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 16);
+            this.label9.Size = new System.Drawing.Size(193, 16);
             this.label9.TabIndex = 29;
             this.label9.Text = "Set Live on non-Default Branch :";
             // 
@@ -387,6 +381,30 @@ namespace SteamPipeLCS
             this.comboSetLive.Name = "comboSetLive";
             this.comboSetLive.Size = new System.Drawing.Size(118, 21);
             this.comboSetLive.TabIndex = 30;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SteamPipeLCS.Properties.Resources.Steam_icon_logo_svg;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(301, 517);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SteamPipeLCS.Properties.Resources.Logo_4Happy_Studio_Berwarna;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(338, 517);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // MainDeployTool
             // 
@@ -417,10 +435,15 @@ namespace SteamPipeLCS
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtAppId);
             this.Controls.Add(this.label1);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainDeployTool";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SteamPipe LCS Deploy Tool";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainDeployTool_FormClosing);
             this.Load += new System.EventHandler(this.MainDeployTool_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

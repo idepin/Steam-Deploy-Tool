@@ -91,7 +91,6 @@ namespace SteamPipeLCS
             this.label3.Size = new System.Drawing.Size(211, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Setup Steamwork Account";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // SteamAccount
             // 

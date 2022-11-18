@@ -30,10 +30,5 @@ namespace SteamPipeLCS
             Properties.Settings.Default.Save();
             Dispose();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

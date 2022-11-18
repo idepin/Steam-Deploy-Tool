@@ -12,12 +12,9 @@ namespace SteamPipeLCS
             InitializeComponent();
             comboDeployType.SelectedIndex = 0;
         }
-        public string script_template, depotConfig;
+        private string scriptTemplate;
+        private string depotConfig;
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
         #region Browse Folder
         private void btnBrowseFolderBuildOutput_Click(object sender, EventArgs e)
         {
@@ -35,6 +32,7 @@ namespace SteamPipeLCS
         }
         #endregion
 
+        #region Button
         private void btnDepotIdChange_Click(object sender, EventArgs e)
         {
             if (txtDepotId.ReadOnly)
@@ -64,26 +62,26 @@ namespace SteamPipeLCS
             }
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnDeploy_Click(object sender, EventArgs e)
         {
             if(comboDeployType.SelectedIndex == 0)
             {
                 InitAppBuildScript(true);
                 InitDepotConfig();
-                CreateScript("app_build_" + txtAppId.Text + "_Local.vdf", script_template);
+                CreateScript("app_build_" + txtAppId.Text + "_Local.vdf", scriptTemplate);
                 CreateScript("depot_" + txtDepotId.Text + ".vdf", depotConfig);
             }
             else
             {
                 InitAppBuildScript(false);
                 InitDepotConfig();
-                CreateScript("app_build_" + txtAppId.Text + "_Online.vdf", script_template);
+                CreateScript("app_build_" + txtAppId.Text + "_Online.vdf", scriptTemplate);
                 CreateScript("depot_" + txtDepotId.Text + ".vdf", depotConfig);
             }
             
         }
 
-        
+        #endregion
 
         private void Deploy(string scriptPath)
         {
@@ -105,7 +103,7 @@ namespace SteamPipeLCS
                 local = "";
             }
             
-            script_template = "\"appbuild\"" +
+            scriptTemplate = "\"appbuild\"" +
             "\n{\n" +
             "\t\"appid\" \"" + txtAppId.Text + "\"\n" +
             "\t\"desc\" \"" + txtDesc.Text + "\"\n" +
@@ -136,9 +134,10 @@ namespace SteamPipeLCS
             "}\n";
         }
 
+        #region UI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboDeployType.SelectedIndex == 0)
+            if (comboDeployType.SelectedIndex == 0)
             {
                 comboSetLive.Text = "";
                 comboSetLive.Enabled = false;
@@ -155,7 +154,7 @@ namespace SteamPipeLCS
             steampipeBuild.LinkVisited = true;
 
             // Navigate to a URL.
-            Process.Start("https://partner.steamgames.com/apps/builds/"+txtAppId.Text);
+            Process.Start("https://partner.steamgames.com/apps/builds/" + txtAppId.Text);
         }
 
         private void toolStripSteamAccount_Click(object sender, EventArgs e)
@@ -163,6 +162,7 @@ namespace SteamPipeLCS
             SteamAccount steamAccount = new SteamAccount();
             steamAccount.ShowDialog();
         }
+        #endregion
 
         private void MainDeployTool_Load(object sender, EventArgs e)
         {
@@ -171,6 +171,16 @@ namespace SteamPipeLCS
                 SteamAccount steamAccount = new SteamAccount();
                 steamAccount.ShowDialog();
             }
+
+            if(Properties.Settings.Default.appId != "")
+            {
+                txtAppId.Text = Properties.Settings.Default.appId;
+                txtDepotId.Text = Properties.Settings.Default.depotId;
+                txtDesc.Text = Properties.Settings.Default.description;
+                txtGameBuildSource.Text = Properties.Settings.Default.gameBuildSrc;
+            }
+            
+            txtVersion.Text = Application.ProductVersion;
         }
 
         private void CreateScript(string path, string content)
@@ -204,6 +214,19 @@ namespace SteamPipeLCS
             }
         }
 
+        private void MainDeployTool_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.appId = txtAppId.Text;
+            Properties.Settings.Default.depotId = txtDepotId.Text;
+            Properties.Settings.Default.description = txtDesc.Text;
+            Properties.Settings.Default.gameBuildSrc = txtGameBuildSource.Text;
+            Properties.Settings.Default.Save();
+        }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about= new About();
+            about.ShowDialog();
+        }
     }
 }
