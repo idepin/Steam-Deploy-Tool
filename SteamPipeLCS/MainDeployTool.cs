@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -191,8 +192,39 @@ namespace SteamPipeLCS
             }
             
             txtVersion.Text = Application.ProductVersion;
+            CheckLocalServer();
         }
-
+        private void CheckLocalServer()
+        {
+            string[] files = Directory.GetFiles(this.txtSteamSDK.Text + "\\tools\\ContentServer");
+            string processName = "";
+            foreach (string str in files)
+            {
+                if (str.Contains("mongoose") && str.Contains("exe"))
+                {
+                    processName = str.Replace(this.txtSteamSDK.Text + "\\tools\\ContentServer\\", "").Replace(".exe", "");
+                    this.txtServerStatus.ForeColor = Color.Green;
+                    this.txtServerStatus.Text = "Running";
+                    break;
+                }
+                this.txtServerStatus.ForeColor = Color.Black;
+                this.txtServerStatus.Text = "Server Not Found";
+            }
+            if (Process.GetProcessesByName(processName).Length != 0)
+                return;
+            int num1 = (int)MessageBox.Show("Mongoose is not running / not found, trying to run...");
+            try
+            {
+                Process.Start(this.txtSteamSDK.Text + "\\tools\\ContentServer\\" + processName + ".exe");
+                int num2 = (int)MessageBox.Show("run mongoose successfully");
+            }
+            catch
+            {
+                this.txtServerStatus.ForeColor = Color.Black;
+                this.txtServerStatus.Text = "Server Not Found";
+                int num3 = (int)MessageBox.Show("Mongoose is not found, please install it first");
+            }
+        }
         private void CreateScript(string path, string content)
         {
             string scriptPath = txtSteamSDK.Text + "\\tools\\ContentBuilder\\scripts\\";

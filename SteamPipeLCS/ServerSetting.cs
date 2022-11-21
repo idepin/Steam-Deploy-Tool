@@ -24,6 +24,7 @@ namespace SteamPipeLCS
         private void btnCreateConfig_Click(object sender, EventArgs e)
         {
             CreateConfig();
+            Dispose();
         }
 
         private void CreateConfig()
@@ -87,6 +88,7 @@ namespace SteamPipeLCS
         private void ServerSetting_Load(object sender, EventArgs e)
         {
             CheckSteamCfg();
+            txtIP.Text = GetLocalIPAddress();
         }
 
         private void CheckSteamCfg()

@@ -53,6 +53,7 @@ namespace SteamPipeLCS
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSteamAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.serverSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreate = new System.Windows.Forms.Button();
             this.comboDeployType = new System.Windows.Forms.ComboBox();
@@ -62,7 +63,8 @@ namespace SteamPipeLCS
             this.comboSetLive = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.serverSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtServerStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -303,9 +305,16 @@ namespace SteamPipeLCS
             // toolStripSteamAccount
             // 
             this.toolStripSteamAccount.Name = "toolStripSteamAccount";
-            this.toolStripSteamAccount.Size = new System.Drawing.Size(180, 22);
+            this.toolStripSteamAccount.Size = new System.Drawing.Size(155, 22);
             this.toolStripSteamAccount.Text = "Steam Account";
             this.toolStripSteamAccount.Click += new System.EventHandler(this.toolStripSteamAccount_Click);
+            // 
+            // serverSettingToolStripMenuItem
+            // 
+            this.serverSettingToolStripMenuItem.Name = "serverSettingToolStripMenuItem";
+            this.serverSettingToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.serverSettingToolStripMenuItem.Text = "Server Setting";
+            this.serverSettingToolStripMenuItem.Click += new System.EventHandler(this.serverSettingToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -319,7 +328,7 @@ namespace SteamPipeLCS
             this.btnCreate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCreate.Location = new System.Drawing.Point(16, 455);
+            this.btnCreate.Location = new System.Drawing.Point(16, 442);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(397, 46);
             this.btnCreate.TabIndex = 2;
@@ -408,18 +417,35 @@ namespace SteamPipeLCS
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // serverSettingToolStripMenuItem
+            // label10
             // 
-            this.serverSettingToolStripMenuItem.Name = "serverSettingToolStripMenuItem";
-            this.serverSettingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.serverSettingToolStripMenuItem.Text = "Server Setting";
-            this.serverSettingToolStripMenuItem.Click += new System.EventHandler(this.serverSettingToolStripMenuItem_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 7F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(13, 491);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Local Server Status :";
+            // 
+            // txtServerStatus
+            // 
+            this.txtServerStatus.AutoSize = true;
+            this.txtServerStatus.Font = new System.Drawing.Font("Arial", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServerStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtServerStatus.Location = new System.Drawing.Point(113, 492);
+            this.txtServerStatus.Name = "txtServerStatus";
+            this.txtServerStatus.Size = new System.Drawing.Size(86, 11);
+            this.txtServerStatus.TabIndex = 32;
+            this.txtServerStatus.Text = "Server Not Found";
             // 
             // MainDeployTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 631);
+            this.Controls.Add(this.txtServerStatus);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.comboSetLive);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.steampipeBuild);
@@ -501,6 +527,8 @@ namespace SteamPipeLCS
         private System.Windows.Forms.ToolStripMenuItem toolStripSteamAccount;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serverSettingToolStripMenuItem;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label txtServerStatus;
     }
 }
 
